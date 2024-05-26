@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('*', (req, res) => {
-    req.sendFile(path.join(__dirname, './client/build/index.html'));
+    res.sendFile(path.join(__dirname, './client/build/index.html'));
 })
 
 app.listen(8000);
