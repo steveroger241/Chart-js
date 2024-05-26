@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, './client/build')));
 
 const file = require('./jsondata.json');
-app.get('/', (req, res) => {
+app.get('/data', (req, res) => {
     res.send(file);
 });
 
