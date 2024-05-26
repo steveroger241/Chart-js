@@ -27,7 +27,7 @@ function App() {
   const [Region, setRegion] = useState([]);
 
   async function callme() {
-    const result = await axios.get(`http://localhost:8000`);
+    const result = await axios.get(`/data`);
 
     setIntensity(result.data.map(e => e.intensity));
     setLikelihood(result.data.map(e => e.likelihood));
